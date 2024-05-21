@@ -34,7 +34,7 @@ export default function Home() {
     <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
       <div class="col d-flex flex-column align-items-start gap-2">
         <h2 class="fw-bold text-body-emphasis">Left-aligned title explaining these awesome features</h2>
-        <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading. We'll add onto it with another sentence and probably just keep going until we run out of words.</p>
+        <p class="text-body-secondary">Paragraph of text beneath the heading to explain the heading. Will add onto it with another sentence and probably just keep going until we run out of words.</p>
         <a href="#" class="btn btn-primary btn-lg">{button2}</a>
       </div>
 
