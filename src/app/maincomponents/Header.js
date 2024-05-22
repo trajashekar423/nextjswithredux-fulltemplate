@@ -3,13 +3,15 @@
 import Link from 'next/link'
 import React from 'react'
 
-
+import Image from 'next/image'
 
 function Header() {
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">Navbar</a>
+    <a class="navbar-brand" href="/">
+    <Image class="d-block mx-auto " src="/landing_logo.png" alt="" width="102" height="25"/>
+    </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -18,7 +20,9 @@ function Header() {
         <li class="nav-item">
         <Link className="nav-link active" href="/about">About</Link>         
         </li>
-      
+        <li class="nav-item">
+        <Link className="nav-link" href="/users">Users</Link>         
+        </li>
         <li class="nav-item">
         <Link className="nav-link" href="/contact">Contact</Link>         
         </li>

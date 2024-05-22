@@ -2,3 +2,21 @@
 @tailwind components;
 
 
+.btn-primary {
+    padding: 10px 25px;
+    background-color: #5f2ded;
+    color: #fff;
+    display: inline-block;
+    text-align: center;
+    border-radius: var(--borderRadius);
+    font-size: 15px;
+   
+    border:none;
+}
+
+.btn-outline-secondary {
+    background: #f2277e !important;   
+    color: #fff !important;
+    margin-left: 28px;
+    border:none;
+}
