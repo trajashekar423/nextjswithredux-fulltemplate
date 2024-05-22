@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const content = useSelector((state) => state.content.homepageContent);
-  const { welcomeMessage, Features,herocontent,button1,button2,images,edupara1 } = content;
+  const { welcomeMessage, Features,herocontent,button1,button2,images, } = content;
   return (
     <main>
       <div className="container">
@@ -47,13 +47,13 @@ export default function Home() {
 
       <div className="container">
         <div className="row">
-          <div className="col">
+          <div className="col-sm-6">
           {images.map((image) => (
             <Image
               key={image.id}
               src={image.url}
               alt="alt"
-              width={200}
+              width={400}
               height={300}
             />
           ))}

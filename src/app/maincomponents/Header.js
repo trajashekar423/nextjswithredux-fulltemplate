@@ -4,13 +4,24 @@ import Link from 'next/link'
 import React from 'react'
 
 import Image from 'next/image'
+import { useSelector } from 'react-redux'
 
 function Header() {
+  const content = useSelector((state) => state.content.homepageContent);
+  const { images } = content;
   return (
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-    <Image class="d-block mx-auto " src="/landing_logo.png" alt="" width="102" height="25"/>
+    {images.map((image) => (
+            <Image
+              key={image.id}
+              src={image.logo}
+              alt="alt"
+              width={120}
+              height={35}
+            />
+          ))}
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

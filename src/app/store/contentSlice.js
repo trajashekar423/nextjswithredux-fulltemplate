@@ -26,7 +26,8 @@ const initialState = {
 
         images :[
           {
-            url:'/public/images/about_12.png'
+            url:'/images/about_12.png',
+            logo:'/images/landing_logo.png'
           }
         ],
 
