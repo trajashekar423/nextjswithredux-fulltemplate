@@ -32,7 +32,7 @@ function Header() {
         <Link className="nav-link active" href="/about">About</Link>         
         </li>
         <li class="nav-item">
-        <Link className="nav-link" href="/users">Users</Link>         
+        <Link className="nav-link" href="/services">Services</Link>         
         </li>
         <li class="nav-item">
         <Link className="nav-link" href="/contact">Contact</Link>         

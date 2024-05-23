@@ -6,20 +6,14 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const content = useSelector((state) => state.content.homepageContent);
-  const { welcomeMessage, Features,herocontent,button1,button2,images, } = content;
+  const { welcomeMessage, Features,herocontent,button1,button2,images,featuredArticles,Reliable,services} = content;
   return (
     <main>
       <div className="container">
         <div className="row">
           <div className="col">
             <div class="px-4 py-5 my-5 text-center">
-              <Image
-                class="d-block mx-auto mb-4"
-                src="/landing_logo.png"
-                alt=""
-                width="152"
-                height="57"
-              />
+              <Image class="d-block mx-auto mb-4" src="/landing_logo.png" alt="" width="152" height="57"/>
               <h1 class="display-5 fw-bold text-body-emphasis">
                 {welcomeMessage}
               </h1>
@@ -45,7 +39,29 @@ export default function Home() {
         </div>
       </div>
 
+
       <div className="container">
+
+    
+      <div className='row'>
+      {services.map(service => (
+            <div className='col-sm-4'>             
+              <ul>       
+            <li key={service.id}>
+              <h3>{service.serviceheading}</h3>
+              <p>{service.para}</p>
+            </li>
+        
+        </ul>
+             
+        </div>
+          ))}
+            </div>
+          </div>
+
+  
+
+      {/* <div className="container">
         <div className="row">
           <div className="col-sm-6">
           {images.map((image) => (
@@ -64,7 +80,7 @@ export default function Home() {
           
          </div>
         </div>
-      </div>
+      </div> */}
 
       <div class="container px-4 py-5">
         <h2 class="pb-2 border-bottom">{Features}</h2>
@@ -72,7 +88,7 @@ export default function Home() {
         <div class="row row-cols-1 row-cols-md-2 align-items-md-center g-5 py-5">
           <div class="col d-flex flex-column align-items-start gap-2">
             <h2 class="fw-bold text-body-emphasis">
-              Left-aligned title explaining these awesome features
+              {Reliable}
             </h2>
             <p class="text-body-secondary">
             {herocontent}.
@@ -83,53 +99,18 @@ export default function Home() {
           </div>
 
           <div class="col">
-            <div class="row row-cols-1 row-cols-sm-2 g-4">
-              <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1em" height="1em"></svg>
-                </div>
-                <h4 class="fw-semibold mb-0 text-body-emphasis">
-                  Featured title
-                </h4>
-                <p class="text-body-secondary">
-                  Paragraph of text beneath the heading to explain the heading.
-                </p>
+            <div class="row ">
+              <div class="col d-flex flex-column ">
+              <ul>
+          {featuredArticles.map(article => (
+            <li key={article.id}>
+              <h3>{article.title}</h3>
+              <p>{article.summary}</p>
+            </li>
+          ))}
+        </ul>
               </div>
-
-              <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1em" height="1em"></svg>
-                </div>
-                <h4 class="fw-semibold mb-0 text-body-emphasis">
-                  Featured title
-                </h4>
-                <p class="text-body-secondary">
-                  Paragraph of text beneath the heading to explain the heading.
-                </p>
-              </div>
-
-              <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1em" height="1em"></svg>
-                </div>
-                <h4 class="fw-semibold mb-0 text-body-emphasis">
-                  Featured title
-                </h4>
-                <p class="text-body-secondary">
-                  Paragraph of text beneath the heading to explain the heading.
-                </p>
-              </div>
-
-              <div class="col d-flex flex-column gap-2">
-                <div class="feature-icon-small d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-4 rounded-3">
-                  <svg class="bi" width="1em" height="1em"></svg>
-                </div>
-                <h4 class="fw-semibold mb-0 text-body-emphasis">
-                  Featured title
-                </h4>
-                <p class="text-body-secondary">
-                  Paragraph of text beneath the heading to explain the heading.
-                </p>
+              <div>             
               </div>
             </div>
           </div>

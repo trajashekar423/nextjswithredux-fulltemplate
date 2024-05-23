@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.css';
 import { Provider } from "react-redux";
 import store from "./store";
 import Header from "./maincomponents/Header";
+import Footer from "./maincomponents/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <Provider store={store}>
           <Header/>
         {children}
+        <Footer/>
         </Provider>
         </body>
     </html>
