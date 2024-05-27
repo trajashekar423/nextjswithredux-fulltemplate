@@ -6,15 +6,16 @@ import { useSelector } from "react-redux";
 
 export default function Home() {
   const content = useSelector((state) => state.content.homepageContent);
-  const { welcomeMessage, Features,herocontent,button1,button2,images,featuredArticles,Reliable,services} = content;
+  const { welcomeMessage, Features,herocontent,button1,button2,images,featuredArticles,Reliable,services,bannerlogo} = content;
   return (
     <main>
+      <section className="bg mb-5"> 
       <div className="container">
         <div className="row">
           <div className="col">
-            <div class="px-4 py-5 my-5 text-center">
-              <Image class="d-block mx-auto mb-4" src="/landing_logo.png" alt="" width="152" height="57"/>
-              <h1 class="display-5 fw-bold text-body-emphasis">
+            <div class="px-4 py-5 my-5 text-center text-white">
+              <Image className="d-block mx-auto mb-4" src={bannerlogo.logo} alt="" width="252" height="57"/>
+              <h1 class="display-5 fw-bold text-white">
                 {welcomeMessage}
               </h1>
               <div class="col-lg-6 mx-auto">
@@ -38,7 +39,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-
+      </section>
 
       <div className="container">
 
@@ -46,14 +47,18 @@ export default function Home() {
       <div className='row'>
       {services.map(service => (
             <div className='col-sm-4'>             
-              <ul>       
-            <li key={service.id}>
+              <ul>   
+              <Image              
+              src={service.bannerimage}
+              alt="alt"
+              width={500}
+              height={145}
+            />
+          <li>
               <h3>{service.serviceheading}</h3>
               <p>{service.para}</p>
-            </li>
-        
-        </ul>
-             
+            </li>        
+        </ul>             
         </div>
           ))}
             </div>

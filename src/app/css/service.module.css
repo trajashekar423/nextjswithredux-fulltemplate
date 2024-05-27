@@ -1,0 +1,23 @@
+.myh1{
+    color: red;
+}
+
+
+.title {
+    color: #333;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+
+  .servicebanner{
+    background-color:yellowgreen;
+    padding: 30px;
+  
+  }
+
+
+  .nomargin{
+    margin: 0;
+    padding: 0;
+  }

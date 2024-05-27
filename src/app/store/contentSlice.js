@@ -4,6 +4,9 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
     homepageContent: {
+      bannerlogo:{
+        logo:'/images/landing_logo.png',
+      },
         welcomeMessage: 'Welcome to Mofi!',
         Features:'Features with title',
         herocontent:'Ignite Your Career with Learning the Largest Online Platform..',
@@ -26,9 +29,14 @@ const initialState = {
         ],
 
         services:[
-          {serviceheading:'Planning & Architecture',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.'},
-          {serviceheading:'Construction',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.'},
-          {serviceheading:'House renovation',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.'}
+          {serviceheading:'Planning & Architecture',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
+          bannerimage:'/images/team-banner2.jpg'
+          
+        },
+          {serviceheading:'Construction',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
+          bannerimage:'/images/2.jpg'},
+          {serviceheading:'House renovation',para:'Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.',
+          bannerimage:'/images/3.jpg'}
         ],
         images :[
           {
@@ -46,10 +54,10 @@ const initialState = {
       },
   aboutpageContent: 'This is the About Page.',
   footerlinks:[ 
-    {Links:'home',url:"https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/"},
+    {Links:'Home',url:"https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/"},
     {Links:'About'},
-    {Links:'services'},
-    {Links:'contact'},
+    {Links:'Services'},
+    {Links:'Contact'},
     {copyright:'© 2024 Company, Inc'}
 
 ],
@@ -59,18 +67,43 @@ const initialState = {
   servicesimages :[
     {
       team:'/images/team-banner2.jpg',
+      server:'/images/server.png',
       
     }
   ]
   
- }
+ },
+
+ contactForm: {
+  name: '',
+  email: '',
+  number: '',
+  message: '',
+  contactheading:'Contact Us'
+},
 
 };
 
 const contentSlice = createSlice({
   name: 'content',
   initialState,
-  reducers: {},
+  reducers: {
+    setContactForm(state, action) {
+      state.contactForm = {
+        ...state.contactForm,
+        ...action.payload,
+      };
+    },
+    submitContactForm(state) {
+      // Handle form submission logic here, e.g., sending data to a server
+      console.log('Form submitted:', state.contactForm);
+      // Reset form fields after submission
+      state.contactForm = { name: '', email: '', message: '' };
+    },
+  },
 });
+
+
+export const { setContactForm, submitContactForm } = contentSlice.actions;
 
 export default contentSlice.reducer;
