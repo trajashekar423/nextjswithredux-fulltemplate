@@ -1,5 +1,6 @@
 "use client"
 
+import Maps from './maps';
 import { useDispatch, useSelector } from 'react-redux';
 import { setContactForm, submitContactForm } from '../store/contentSlice';
 
@@ -50,6 +51,10 @@ const ContactPage = () => {
         <button type="submit" className="btn btn-primary mt-3">Submit</button>
       </form>
     </div>
+        </div>
+
+        <div className='col-sm-6'>
+          <Maps/>
         </div>
 
       </div>

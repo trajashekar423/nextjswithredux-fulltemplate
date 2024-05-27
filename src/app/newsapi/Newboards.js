@@ -1,7 +1,7 @@
 "use client"
 
 import React, { useEffect, useState } from 'react'
-
+import Newsitems from './page';
 const Newboards = () => {
     const [articles,setArticles] = useState([]);
     useEffect(()=>{
