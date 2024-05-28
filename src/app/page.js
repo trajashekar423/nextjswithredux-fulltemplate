@@ -43,7 +43,7 @@ export default function Home() {
 
       <div className="container">
       <div className='row'>
-        <div>
+        <div className="col">
       {services.map (service => (
             <div key={service.id} className='col-sm-4'>
               <ul>
