@@ -9,7 +9,7 @@ const initialState = {
       },
         welcomeMessage: 'Welcome to Mofi!',
         Features:'Features with title',
-        herocontent:'This is Demo Tempalte created using nextjs with redux toolkit',
+        herocontent:'This is Demo Template created using nextjs with redux toolkit',
         introduction: 'We are excited to have you here. Explore and enjoy the content we have to offer.',
         Reliable:'Reliable construction service since 1973. We are not just building houses. We are building dreams.',
         eduheading1:[
