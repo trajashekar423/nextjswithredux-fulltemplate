@@ -43,8 +43,7 @@ export default function Home() {
 
       <div className="container">
       <div className='row'>
-        <div className="col">
-      {services.map (service => (
+             {services.map (service => (
             <div key={service.id} className='col-sm-4'>
               <ul>
               <Image src={service.bannerimage} alt="alt" width={500} height={145}/>
@@ -56,7 +55,7 @@ export default function Home() {
         </div>
           ))}
             </div>
-            </div>
+           
           </div>
 
       <div class="container px-4 py-5">
