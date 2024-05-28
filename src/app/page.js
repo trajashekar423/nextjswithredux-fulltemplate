@@ -9,7 +9,7 @@ export default function Home() {
   const { welcomeMessage, Features,herocontent,button1,button2,images,featuredArticles,Reliable,services,bannerlogo} = content;
   return (
     <main>
-      <section className="bg mb-5"> 
+      <section className="bg mb-5">
       <div className="container">
         <div className="row">
           <div className="col">
@@ -42,56 +42,22 @@ export default function Home() {
       </section>
 
       <div className="container">
-
-    
       <div className='row'>
-        <div >
-
-        
+        <div>
       {services.map (service => (
-            <div key={service.id} className='col-sm-4'>             
-              <ul >   
-              <Image              
-              src={service.bannerimage}
-              alt="alt"
-              width={500}
-              height={145}
-            />
+            <div key={service.id} className='col-sm-4'>
+              <ul>
+              <Image src={service.bannerimage} alt="alt" width={500} height={145}/>
           <li>
               <h3>{service.serviceheading}</h3>
               <p>{service.para}</p>
-            </li>        
-        </ul>             
+            </li>
+        </ul>
         </div>
-       
           ))}
             </div>
             </div>
           </div>
-         
-
-  
-
-      {/* <div className="container">
-        <div className="row">
-          <div className="col-sm-6">
-          {images.map((image) => (
-            <Image
-              key={image.id}
-              src={image.url}
-              alt="alt"
-              width={400}
-              height={300}
-            />
-          ))}
-          </div>
-
-          <div className="col">
-          
-          
-         </div>
-        </div>
-      </div> */}
 
       <div class="container px-4 py-5">
         <h2 class="pb-2 border-bottom">{Features}</h2>
@@ -121,7 +87,7 @@ export default function Home() {
           ))}
         </ul>
               </div>
-              <div>             
+              <div>
               </div>
             </div>
           </div>
