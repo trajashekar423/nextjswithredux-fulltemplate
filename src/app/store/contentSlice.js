@@ -53,7 +53,6 @@ const initialState = {
            
       },
   aboutpageContent: 'This is the About Page.',
-<<<<<<< Updated upstream
   footerlinks:[ 
     {Links:'Home',url:"https://getbootstrap.com/docs/5.3/examples/navbars-offcanvas/"},
     {Links:'About'},
@@ -83,13 +82,13 @@ const initialState = {
   contactheading:'Contact Us'
 },
 
-=======
+
   Contactpage:{
     name:'',
     email:'',
     message:'',
   },
->>>>>>> Stashed changes
+ 
 };
 
 const contentSlice = createSlice({
