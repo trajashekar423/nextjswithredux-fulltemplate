@@ -45,8 +45,11 @@ export default function Home() {
 
     
       <div className='row'>
-      {services.map(service => (
-            <div key={item.id} className='col-sm-4'>             
+        <div >
+
+        
+      {services.map (service => (
+            <div key={service.id} className='col-sm-4'>             
               <ul >   
               <Image              
               src={service.bannerimage}
@@ -60,9 +63,12 @@ export default function Home() {
             </li>        
         </ul>             
         </div>
+       
           ))}
             </div>
+            </div>
           </div>
+         
 
   
 
