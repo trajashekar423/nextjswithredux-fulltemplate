@@ -46,8 +46,8 @@ export default function Home() {
     
       <div className='row'>
       {services.map(service => (
-            <div className='col-sm-4'>             
-              <ul>   
+            <div key={item.id} className='col-sm-4'>             
+              <ul >   
               <Image              
               src={service.bannerimage}
               alt="alt"
