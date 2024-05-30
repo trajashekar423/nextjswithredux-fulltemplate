@@ -23,7 +23,7 @@ const initialState = {
           }
         ],
         featuredArticles: [
-          { id: 1, title: 'How to Use Next.js', summary: 'Learn the basics of Next.js and how to get started.' },
+          { id: 1, title: 'Solution that grows with you', summary: 'Sodales tempor sapien quaerat ipsum undo congue laoreet turpis neque auctor turpis vitae dolor luctus placerat magna and ligula cursus purus vitae purus an ipsum suscipit' },
           { id: 2, title: 'Understanding Redux Toolkit', summary: 'A deep dive into Redux Toolkit and its benefits.' },
           { id: 3, title: 'Building Modern Web Apps', summary: 'Best practices for building modern web applications.' },
         ],
@@ -43,7 +43,8 @@ const initialState = {
             url:'/images/about_12.png',
             logo:'/images/landing_logo.png',
             service1:'/images/1.jpg',
-            bannerimage:'/images/team-banner2.jpg'
+            bannerimage:'/images/team-banner2.jpg',
+            server:'/images/server.jpg'
           }
         ],
 
@@ -68,6 +69,7 @@ const initialState = {
     {
       team:'/images/team-banner2.jpg',
       server:'/images/server.png',
+      About:'/images/aboutbg.png',
       
     }
   ]
